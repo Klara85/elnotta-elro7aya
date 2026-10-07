@@ -1,0 +1,1 @@
+export async function post(path,body){const r=await fetch("/api"+path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(body)});const d=await r.json().catch(()=>({}));if(!r.ok)throw new Error(d.error||"حصلت مشكلة");return d}
